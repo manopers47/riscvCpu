@@ -14,6 +14,8 @@ A keep it simple (and stupid) version of RISC-V implementation in RTL and simula
 10) For more details on the development history see: [30 days with a #riscv 32ui architecture - part I](https://www.linkedin.com/feed/update/urn:li:activity:7128997010409459712/ )
 
 ## To run this design
+```
 git clone https://github.com/manopers47/riscvCpu
 cd riscvCpu/sim
 make sim
+```
