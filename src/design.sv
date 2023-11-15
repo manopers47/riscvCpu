@@ -26,8 +26,46 @@ module riscvCpu #(parameter PC_WIDTH = 32, INS_WIDTH = 32, REG_WIDTH = 32, IMMFU
   output logic [REG_WIDTH-1:0] memwrData,
   output logic memWE,
   
-  output logic [PC_WIDTH-1:0] InstrAdr
+
+`ifndef RISCV_FORMAL
+`define RISCV_FORMAL
+`endif
+
+`ifdef RISCV_FORMAL
+   output reg        rvfi_valid,
+   output reg [63:0] rvfi_order,
+   output reg [31:0] rvfi_insn,
+   output reg        rvfi_trap,
+   output reg        rvfi_halt,
+   output reg        rvfi_intr,
+   output reg [ 1:0] rvfi_mode,
+   output reg [ 1:0] rvfi_ixl,
+   output reg [ 4:0] rvfi_rs1_addr,
+   output reg [ 4:0] rvfi_rs2_addr,
+   output reg [31:0] rvfi_rs1_rdata,
+   output reg [31:0] rvfi_rs2_rdata,
+   output reg [ 4:0] rvfi_rd_addr,
+   output reg [31:0] rvfi_rd_wdata,
+   output reg [31:0] rvfi_pc_rdata,
+   output reg [31:0] rvfi_pc_wdata,
+   output reg [31:0] rvfi_mem_addr,
+   output reg [ 3:0] rvfi_mem_rmask,
+   output reg [ 3:0] rvfi_mem_wmask,
+   output reg [31:0] rvfi_mem_rdata,
+   output reg [31:0] rvfi_mem_wdata,
+   
+   output reg [63:0] rvfi_csr_mcycle_rmask,
+   output reg [63:0] rvfi_csr_mcycle_wmask,
+   output reg [63:0] rvfi_csr_mcycle_rdata,
+   output reg [63:0] rvfi_csr_mcycle_wdata,
+
+   output reg [63:0] rvfi_csr_minstret_rmask,
+   output reg [63:0] rvfi_csr_minstret_wmask,
+   output reg [63:0] rvfi_csr_minstret_rdata,
+   output reg [63:0] rvfi_csr_minstret_wdata,
+`endif
   
+  output logic [PC_WIDTH-1:0] InstrAdr
 );
   
   
@@ -130,4 +168,41 @@ module riscvCpu #(parameter PC_WIDTH = 32, INS_WIDTH = 32, REG_WIDTH = 32, IMMFU
   //else if ((lsu_rd_adr == rs2_adr) && (lsu_rd_adr !=0)) opd2 = ruu_rdata;
   else opd2 = rs2;
   
+`ifdef RISCV_FORMAL
+reg [31:0] exu_IR, lsu_IR;
+reg [31:0] exu_opd1, exu_opd2, lsu_opd1, lsu_opd2;
+reg [63:0] r_rvfi_order;
+
+always  @(lsu_PC or resetn or rvfi_pc_rdata) begin 
+    if(resetn && (lsu_PC != rvfi_pc_rdata)) begin
+       rvfi_valid = 1;
+       r_rvfi_order = r_rvfi_order + 1;
+    end else begin
+       rvfi_valid = 0;
+       r_rvfi_order = r_rvfi_order;
+    end
+  end
+  always @ (posedge clk) rvfi_order <= r_rvfi_order;
+
+  always @ (posedge clk) rvfi_pc_rdata <= lsu_PC;
+  assign rvfi_pc_wdata = lsu_PC;
+
+  always @(posedge clk) exu_IR <= IR;
+  always @(posedge clk) lsu_IR <= exu_IR;
+  always @(posedge clk) rvfi_insn <= lsu_IR;
+
+  always @(posedge clk) exu_opd1 <= opd1;
+  always @(posedge clk) lsu_opd1 <= exu_opd1;
+  always @(posedge clk) rvfi_rs1_rdata <= lsu_opd1;
+  assign rvfi_rs1_addr = rvfi_insn[19:15];
+
+  always @(posedge clk) exu_opd2 <= opd2;
+  always @(posedge clk) lsu_opd2 <= exu_opd2;
+  always @(posedge clk) rvfi_rs2_rdata <= lsu_opd2;
+  assign rvfi_rs2_addr = rvfi_insn[24:20];
+
+  assign rvfi_rd_addr = lsu_rd_adr;
+  assign rvfi_rd_wdata = ruu_rdata;
+
+`endif
 endmodule
