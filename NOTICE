@@ -1,0 +1,32 @@
+VidyutSetu (RTL top module: riscvCpu)
+Copyright 2023-2026 Silicon Setu and the VidyutSetu contributors.
+
+This product is licensed under the Apache License, Version 2.0
+(see the LICENSE file). Contributors keep the copyright in their
+contributions and license them to Silicon Setu under the Contributor
+Agreement in legal/CONTRIBUTOR_AGREEMENT.md.
+
+Silicon Setu: [LEGAL NAME OF THE SECTION 8 COMPANY], CIN [CIN].
+Contact: admin@siliconsetu.in
+
+History
+-------
+This project was originally written by its original author (GitHub: manopers47) as
+"riscvCpu". Versions up to and including the tag v0.1.0-baseline were
+published under the GNU General Public License v3.0. The original author,
+as sole copyright holder, relicensed the project under the Apache License,
+Version 2.0 from the next release onward.
+
+Third-party material
+--------------------
+sim/rvfi_reg_check.sv
+  Copyright (C) 2017 Clifford Wolf. ISC-style license (see file header).
+  From the riscv-formal project.
+
+sim/riscv_asm.sv
+  Derived from github.com/jeras/riscv_asm.sv, modified for ABI register
+  names. [TO CHECK: confirm upstream license and copy its notice here.]
+
+sim/custom-long.asm, sim/custom.hex
+  Test sequences derived from riscv-tests
+  (github.com/riscv-software-src/riscv-tests), BSD 3-Clause license.
