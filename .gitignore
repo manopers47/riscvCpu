@@ -1,0 +1,5 @@
+# Simulation build output
+sim/vbuild/
+sim/*.vcd
+sim/*.log
+obj_dir/

@@ -112,7 +112,9 @@ wire [31:0] rvfi_rs1, rvfi_rs2;
   initial begin
     //#1500;
     $dumpfile("dump.vcd"); $dumpvars;
-    #10000 $finish;
+    // Watchdog: if the program never signals pass/fail, fail the run
+    // so CI does not report a hung test as green.
+    #10000 $fatal(1, "TIMEOUT: test did not complete within 10000 time units");
   end
   
   initial begin
@@ -148,6 +150,8 @@ wire [31:0] rvfi_rs1, rvfi_rs2;
     $display ("%0t Test completed", $time);
     repeat (5) @ (posedge clk);
     print_regs;
+    // Exit non-zero on failure so make and CI see it.
+    if (regs[7] != 'h5a5) $fatal(1, "TEST FAILED: x7 = %0x (expected 5a5)", regs[7]);
     $finish;
     
   end
