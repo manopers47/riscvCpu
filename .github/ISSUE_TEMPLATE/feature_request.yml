@@ -1,0 +1,38 @@
+name: Feature or task
+description: Propose new work, such as a test, an RTL improvement or a doc
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should be done?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+      description: Who benefits, or what problem it solves.
+  - type: textarea
+    id: done
+    attributes:
+      label: How do we know it is done?
+      description: Tests or checks that should pass.
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options:
+        - Small (good first issue)
+        - Medium
+        - Large (may need an RFC, see GOVERNANCE.md)
+  - type: input
+    id: program
+    attributes:
+      label: Program (if any)
+      placeholder: chip-yagna
+  - type: markdown
+    attributes:
+      value: >-
+        ISA extensions, pipeline restructuring and interface changes need an RFC
+        (`docs/rfcs/0000-template.md`) before code.

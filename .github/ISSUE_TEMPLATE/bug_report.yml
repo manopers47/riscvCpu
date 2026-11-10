@@ -1,0 +1,37 @@
+name: Bug report
+description: The core or testbench does something wrong
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Commands, the asm sequence or hex file, and the commit or tag you used.
+      placeholder: |
+        git checkout <commit>
+        cd sim && make sim
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Relevant part of vlt_sim.log or vlt_comp.log.
+      render: text
+  - type: input
+    id: verilator
+    attributes:
+      label: Verilator version
+      placeholder: "verilator --version"
+  - type: input
+    id: program
+    attributes:
+      label: Program (if any)
+      placeholder: chip-yagna
