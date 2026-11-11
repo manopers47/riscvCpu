@@ -17,20 +17,18 @@ jobs:
   sim:
     name: Verilator regression
     runs-on: ubuntu-24.04
+    # Official Verilator image: no apt install on the runner, and the
+    # version is pinned so results don't change under us.
+    container: verilator/verilator:v5.020
+    defaults:
+      run:
+        shell: bash
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Verilator
-        run: |
-          # Retry: the runner's apt mirror sometimes fails DNS lookups.
-          for i in 1 2 3; do
-            sudo apt-get update -o Acquire::Retries=3 &&
-              sudo apt-get install -y --no-install-recommends -o Acquire::Retries=3 verilator &&
-              break
-            echo "apt attempt $i failed, retrying in 15s"; sleep 15
-          done
-          verilator --version
+      - name: Verilator version
+        run: verilator --version
 
       - name: Run testbench
         working-directory: sim
