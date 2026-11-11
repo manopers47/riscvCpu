@@ -1,6 +1,6 @@
 # VidyutSetu (riscvCpu)
 
-[![CI](https://github.com/manopers47/riscvCpu/actions/workflows/ci.yml/badge.svg)](https://github.com/manopers47/riscvCpu/actions/workflows/ci.yml)
+[![CI](https://github.com/siliconsetu/VidyutSetu/actions/workflows/ci.yml/badge.svg)](https://github.com/siliconsetu/VidyutSetu/actions/workflows/ci.yml)
 
 A Silicon Setu open-hardware project. The RTL top module is `riscvCpu`.
 
@@ -20,8 +20,8 @@ A keep it simple (and stupid) version of RISC-V implementation in SystemVerilog 
 
 ## To run this design
 ```
-git clone https://github.com/manopers47/riscvCpu
-cd riscvCpu/sim
+git clone https://github.com/siliconsetu/VidyutSetu
+cd VidyutSetu/sim
 make sim      # exits non-zero if the test fails
 ```
 
@@ -29,6 +29,6 @@ make sim      # exits non-zero if the test fails
 See [CONTRIBUTING.md](CONTRIBUTING.md) (DCO sign-off and Contributor Agreement), [GOVERNANCE.md](GOVERNANCE.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Programs such as [Chip Yagna](programs/chip-yagna/README.md) organize work on this core.
 
 ## License
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE). Versions up to `v0.1.0-baseline` were released under GPL-3.0.
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE); third-party license texts are in [LICENSES/](LICENSES/). Versions up to `v0.1.0-baseline` were released under GPL-3.0.
 
 Contact: admin@siliconsetu.in

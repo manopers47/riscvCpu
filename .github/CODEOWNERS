@@ -1,4 +1,4 @@
-# Every change needs review from a Maintainer.
-# After the repository moves to the siliconsetu organization, replace the
-# line below with:  * @siliconsetu/developers
-* @manopers47
+# Every change needs review from a Maintainer: the siliconsetu/developers
+# team (see GOVERNANCE.md). The team must have Write access or higher to
+# this repository, or GitHub ignores this file.
+* @siliconsetu/developers
