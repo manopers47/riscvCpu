@@ -2,7 +2,7 @@
 
 **Version 1.0 (DRAFT, not yet reviewed by a lawyer)**
 
-This agreement is between you ("Contributor") and **[LEGAL NAME OF THE SECTION 8 COMPANY]**, CIN **[CIN]**, registered office **[REGISTERED ADDRESS]** ("Silicon Setu"). It covers everything you submit to any Silicon Setu repository, including VidyutSetu.
+This agreement is between you ("Contributor") and **Enadu CSP Foundation**, CIN **U85499TN2026NPL195688**, registered office **5/153, Nehru Street, Madipakkam, Chennai – 600091** ("Silicon Setu"). It covers everything you submit to any Silicon Setu repository, including VidyutSetu.
 
 ## 1. You keep your copyright
 You keep the copyright in your contributions. Nothing in this agreement transfers ownership to Silicon Setu.
@@ -26,12 +26,12 @@ If you are under 18, a parent or guardian must also sign.
 
 | | Contributor | Parent/guardian (if under 18) | For Silicon Setu |
 |---|---|---|---|
-| Name | | | [AUTHORIZED SIGNATORY NAME] |
+| Name | | | AUTHORIZED-SIGNATORY |
 | GitHub username | | | |
 | Email | | | admin@siliconsetu.in |
 | Program (if any) | | | |
 | Signature | | | |
 | Date | | | |
-| Title | | | [DESIGNATION, e.g. Director] |
+| Title | | | Director |
 
 Return the signed copy to your Program Lead, or to admin@siliconsetu.in.
