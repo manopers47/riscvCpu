@@ -12,7 +12,7 @@ VFLAGS = --cc --Mdir vbuild --prefix Vtop --binary \
 sim: build run
 
 build:
-	verilator $(VFLAGS) -f modules.f riscv_asm.sv testbench.sv rvfi_reg_check.sv 2>&1 | tee vlt_comp.log
+	verilator $(VFLAGS) -f modules.f rv32i_disasm.sv testbench.sv rvfi_reg_check.sv 2>&1 | tee vlt_comp.log
 
 run:
 	./vbuild/Vtop 2>&1 | tee vlt_sim.log
