@@ -1,6 +1,6 @@
-# Contributing to VidyutSetu
+# Contributing to riscvCpu
 
-Welcome! VidyutSetu is a Silicon Setu project, open to students, faculty and engineers. Read this once, then use the checklist at the bottom for every PR.
+Welcome! riscvCpu is a Silicon Setu project, open to students, faculty and engineers. Read this once, then use the checklist at the bottom for every PR.
 
 ## 1. Before you start
 1. Read `README.md` to understand the 5-stage pipeline (Fetch 2 clk, Decode, Execute, Memory 2 clk, Update).
@@ -10,8 +10,8 @@ Welcome! VidyutSetu is a Silicon Setu project, open to students, faculty and eng
 
 ## 2. Set up
 ```
-git clone https://github.com/siliconsetu/VidyutSetu      # or your fork
-cd VidyutSetu/sim
+git clone https://github.com/siliconsetu/riscvCpu      # or your fork
+cd riscvCpu/sim
 make sim                                               # must pass before you change anything
 ```
 `make sim` exits non-zero if the build or the test fails. Tools: Verilator 5.x (CI uses 5.020, the original work used 5.014) and a C++ compiler.

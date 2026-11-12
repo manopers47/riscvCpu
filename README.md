@@ -1,6 +1,6 @@
-# VidyutSetu (riscvCpu)
+# riscvCpu
 
-[![CI](https://github.com/siliconsetu/VidyutSetu/actions/workflows/ci.yml/badge.svg)](https://github.com/siliconsetu/VidyutSetu/actions/workflows/ci.yml)
+[![CI](https://github.com/siliconsetu/riscvCpu/actions/workflows/ci.yml/badge.svg)](https://github.com/siliconsetu/riscvCpu/actions/workflows/ci.yml)
 
 A Silicon Setu open-hardware project. The RTL top module is `riscvCpu`.
 
@@ -20,8 +20,8 @@ A keep it simple (and stupid) version of RISC-V implementation in SystemVerilog 
 
 ## To run this design
 ```
-git clone https://github.com/siliconsetu/VidyutSetu
-cd VidyutSetu/sim
+git clone https://github.com/siliconsetu/riscvCpu
+cd riscvCpu/sim
 make sim      # exits non-zero if the test fails
 ```
 

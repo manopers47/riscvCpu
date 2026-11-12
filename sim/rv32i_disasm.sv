@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2026 Silicon Setu and the VidyutSetu contributors.
+// Copyright 2026 Silicon Setu and contributors.
 //
 // RV32I disassembler for the testbench monitor. Written from the RISC-V
 // Unprivileged ISA specification (RV32I base, Zicsr, Zifencei).

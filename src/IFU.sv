@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2023-2026 Silicon Setu and the VidyutSetu contributors.
+// Copyright 2023-2026 Silicon Setu and contributors.
 
 module IFU #(parameter PC_WIDTH = 32, INS_WIDTH = 32) (
   input resetn,

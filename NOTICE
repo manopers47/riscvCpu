@@ -1,5 +1,5 @@
-VidyutSetu (RTL top module: riscvCpu)
-Copyright 2023-2026 Silicon Setu and the VidyutSetu contributors.
+riscvCpu, a Silicon Setu open-hardware RISC-V core
+Copyright 2023-2026 Silicon Setu and contributors.
 
 This product is licensed under the Apache License, Version 2.0
 (see the LICENSE file). Contributors keep the copyright in their

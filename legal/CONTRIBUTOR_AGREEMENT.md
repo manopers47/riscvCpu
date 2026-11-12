@@ -2,7 +2,7 @@
 
 **Version 1.0 (DRAFT, not yet reviewed by a lawyer)**
 
-This agreement is between you ("Contributor") and **Enadu CSP Foundation**, CIN **U85499TN2026NPL195688**, registered office **5/153, Nehru Street, Madipakkam, Chennai – 600091** ("Silicon Setu"). It covers everything you submit to any Silicon Setu repository, including VidyutSetu.
+This agreement is between you ("Contributor") and **Enadu CSP Foundation**, CIN **U85499TN2026NPL195688**, registered office **5/153, Nehru Street, Madipakkam, Chennai – 600091** ("Silicon Setu"). It covers everything you submit to any Silicon Setu repository, including riscvCpu.
 
 ## 1. You keep your copyright
 You keep the copyright in your contributions. Nothing in this agreement transfers ownership to Silicon Setu.

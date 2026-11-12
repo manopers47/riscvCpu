@@ -1,6 +1,6 @@
 # Governance
 
-VidyutSetu is maintained by **Silicon Setu**, a non-profit (Section 8) company, as an education and open-hardware asset. This document explains who decides what.
+riscvCpu is maintained by **Silicon Setu**, a non-profit (Section 8) company, as an education and open-hardware asset. This document explains who decides what.
 
 ## Roles and GitHub teams
 
