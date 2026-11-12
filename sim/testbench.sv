@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright 2023-2026 Silicon Setu and the VidyutSetu contributors.
+
 // Code your testbench here
 // or browse Examples
 `define REG_ADDR_WIDTH 5
@@ -187,7 +190,7 @@ wire [31:0] rvfi_rs1, rvfi_rs2;
   always @(posedge clk) begin
 //    if(rvfi_valid) $display ("%0t rs1_adr = %0x, rs1_data = %0x, rs2_adr = %0x, rs2_data = %0x, rd_adr = %0x, rd_data=%0x",
 //      $time, rvfi_rs1_addr, rvfi_rs1_rdata, rvfi_rs2_addr, rvfi_rs2_rdata, rvfi_rd_addr, rvfi_rd_wdata);
-      if(rvfi_valid) $display ("[%0t] RVFI Monitor: PC=%05x : Ins=%x : Mnemonic: %s", $time, rvfi_pc_rdata, rvfi_insn, riscv_asm::dis_32(rvfi_insn));
+      if(rvfi_valid) $display ("[%0t] RVFI Monitor: PC=%05x : Ins=%x : Mnemonic: %s", $time, rvfi_pc_rdata, rvfi_insn, rv32i_disasm::disasm(rvfi_insn));
 
   end
 `endif 

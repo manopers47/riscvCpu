@@ -6,7 +6,7 @@ This product is licensed under the Apache License, Version 2.0
 contributions and license them to Silicon Setu under the Contributor
 Agreement in legal/CONTRIBUTOR_AGREEMENT.md.
 
-Silicon Setu: [LEGAL NAME OF THE SECTION 8 COMPANY], CIN [CIN].
+Silicon Setu: Enadu CSP Foundation, CIN U85499TN2026NPL195688.
 Contact: admin@siliconsetu.in
 
 History
@@ -19,14 +19,25 @@ Version 2.0 from the next release onward.
 
 Third-party material
 --------------------
-sim/rvfi_reg_check.sv
-  Copyright (C) 2017 Clifford Wolf. ISC-style license (see file header).
-  From the riscv-formal project.
+Full license texts are in the LICENSES/ directory.
 
-sim/riscv_asm.sv
-  Derived from github.com/jeras/riscv_asm.sv, modified for ABI register
-  names. [TO CHECK: confirm upstream license and copy its notice here.]
+sim/rvfi_reg_check.sv
+  Copyright (C) 2017 Clifford Wolf. ISC license
+  (see the file header and LICENSES/ISC-riscv-formal.txt).
+  From the riscv-formal project (github.com/YosysHQ/riscv-formal).
 
 sim/custom-long.asm, sim/custom.hex
   Test sequences derived from riscv-tests
-  (github.com/riscv-software-src/riscv-tests), BSD 3-Clause license.
+  (github.com/riscv-software-src/riscv-tests).
+  Copyright (c) 2012-2015, The Regents of the University of California
+  (Regents). All Rights Reserved. BSD 3-Clause license
+  (see LICENSES/BSD-3-Clause-riscv-tests.txt).
+
+Removed material
+----------------
+sim/riscv_asm.sv, a disassembly helper derived from
+github.com/jeras/riscv_asm.sv, was used by the testbench monitor in
+versions up to v0.1.0-baseline. Its upstream license could not be
+confirmed (the upstream repository is no longer publicly available), so
+it was removed and replaced by sim/rv32i_disasm.sv, written for this
+project from the RISC-V ISA specification and licensed under Apache-2.0.
