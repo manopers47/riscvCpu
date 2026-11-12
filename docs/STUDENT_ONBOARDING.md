@@ -1,4 +1,4 @@
-# Student Onboarding: VidyutSetu
+# Student Onboarding: riscvCpu
 
 Plan for about 2 hours for your first merged contribution.
 
@@ -13,7 +13,7 @@ Plan for about 2 hours for your first merged contribution.
 1. Read `README.md` (pipeline: Fetch 2 clk, Decode, Execute, Memory 2 clk, Update; branches/jumps fixed 4 clk).
 2. Fork the repo, clone your fork, then run:
    ```
-   cd VidyutSetu/sim && make sim
+   cd riscvCpu/sim && make sim
    ```
 3. Open `sim/custom-long.asm` and find 3 instructions; trace each through the RTL.
 4. Look at one waveform (GTKWave) for a short sequence.

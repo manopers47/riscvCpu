@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2023-2026 Silicon Setu and the VidyutSetu contributors.
+// Copyright 2023-2026 Silicon Setu and contributors.
 
 `define REG_ADDR_WIDTH 5
 `include "defines.vh"
